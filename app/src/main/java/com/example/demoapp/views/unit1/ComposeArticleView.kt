@@ -1,4 +1,4 @@
-package com.example.demoapp.views
+package com.example.demoapp.views.unit1
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
