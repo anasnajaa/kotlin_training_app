@@ -1,4 +1,4 @@
-package com.example.weatherapp.views
+package com.example.demoapp.views
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -13,10 +13,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.weatherapp.R
+import com.example.demoapp.R
 
 @Composable
-fun DetailsView(modifier: Modifier) {
+fun ComposeArticleView(modifier: Modifier) {
     val image = painterResource(R.drawable.bg_compose_background)
     Column (modifier = modifier) {
         Image(

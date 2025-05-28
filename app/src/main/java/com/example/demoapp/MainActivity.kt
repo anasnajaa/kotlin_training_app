@@ -1,4 +1,4 @@
-package com.example.weatherapp
+package com.example.demoapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,10 +8,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.example.weatherapp.ui.theme.WeatherAppTheme
-import com.example.weatherapp.views.HomeView
-import com.example.weatherapp.views.DetailsView
-import com.example.weatherapp.views.TaskCompleteView
+import com.example.demoapp.ui.theme.DemoAppTheme
+import com.example.demoapp.views.TaskCompleteView
+import com.example.demoapp.views.ComposeQuadrantsView
+import com.example.demoapp.views.HomeView
+import com.example.demoapp.views.ComposeArticleView
+
 
 class MainActivity : ComponentActivity() {
 
@@ -22,13 +24,14 @@ class MainActivity : ComponentActivity() {
         // root view
         setContent {
 
-
-            WeatherAppTheme {
+            DemoAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    TaskCompleteView( modifier = Modifier.padding(innerPadding) )
+                    // ComposeArticleView( modifier = Modifier.padding(innerPadding) )
+                    // TaskCompleteView( modifier = Modifier.padding(innerPadding) )
+                    // HomeView( modifier = Modifier.padding(innerPadding) )
+                    ComposeQuadrantsView( modifier = Modifier.padding(innerPadding) )
                 }
             }
-
 
         }
     }
