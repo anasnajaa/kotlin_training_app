@@ -13,6 +13,7 @@ import com.example.demoapp.views.TaskCompleteView
 import com.example.demoapp.views.ComposeQuadrantsView
 import com.example.demoapp.views.HomeView
 import com.example.demoapp.views.ComposeArticleView
+import com.example.demoapp.views.BusinessCardView
 
 
 class MainActivity : ComponentActivity() {
@@ -29,7 +30,8 @@ class MainActivity : ComponentActivity() {
                     // ComposeArticleView( modifier = Modifier.padding(innerPadding) )
                     // TaskCompleteView( modifier = Modifier.padding(innerPadding) )
                     // HomeView( modifier = Modifier.padding(innerPadding) )
-                    ComposeQuadrantsView( modifier = Modifier.padding(innerPadding) )
+                    // ComposeQuadrantsView( modifier = Modifier.padding(innerPadding) )
+                    BusinessCardView( modifier = Modifier.padding(innerPadding) )
                 }
             }
 
