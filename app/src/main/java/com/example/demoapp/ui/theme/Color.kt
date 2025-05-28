@@ -14,3 +14,6 @@ var Quadrant1Color = Color(0xFFEADDFF)
 var Quadrant2Color = Color(0xFFD0BCFF)
 var Quadrant3Color = Color(0xFFB69DF8)
 var Quadrant4Color = Color(0xFFF6EDFF)
+
+var LemonadeNavBarColor = Color(0xFFFFF176)
+var LemonadeButtonColor = Color(0xFFC8E6C9)

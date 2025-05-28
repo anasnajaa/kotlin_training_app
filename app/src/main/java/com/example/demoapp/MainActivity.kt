@@ -12,6 +12,7 @@ import com.example.demoapp.domain.usecase.Unit2UseCases
 import com.example.demoapp.ui.theme.DemoAppTheme
 import com.example.demoapp.views.unit1.BusinessCardView
 import com.example.demoapp.views.unit2.DiceRollerView
+import com.example.demoapp.views.unit2.LemonadeView
 
 class MainActivity : ComponentActivity() {
 
@@ -33,7 +34,8 @@ class MainActivity : ComponentActivity() {
                     // HomeView( modifier = Modifier.padding(innerPadding) )
                     // ComposeQuadrantsView( modifier = Modifier.padding(innerPadding) )
                     // BusinessCardView( modifier = Modifier.padding(innerPadding) )
-                    DiceRollerView( modifier = Modifier.padding(innerPadding) )
+                    // DiceRollerView( modifier = Modifier.padding(innerPadding) )
+                    LemonadeView( modifier = Modifier.padding(innerPadding) )
                 }
             }
 
