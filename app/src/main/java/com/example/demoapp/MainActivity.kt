@@ -8,17 +8,18 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.example.demoapp.domain.usecase.Unit2UseCases
 import com.example.demoapp.ui.theme.DemoAppTheme
-import com.example.demoapp.views.TaskCompleteView
-import com.example.demoapp.views.ComposeQuadrantsView
-import com.example.demoapp.views.HomeView
-import com.example.demoapp.views.ComposeArticleView
-import com.example.demoapp.views.BusinessCardView
-
+import com.example.demoapp.views.unit1.BusinessCardView
+import com.example.demoapp.views.unit2.DiceRollerView
 
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        // filter log by Unit2UseCases
+        Unit2UseCases.LessonClasses().main()
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
@@ -31,7 +32,8 @@ class MainActivity : ComponentActivity() {
                     // TaskCompleteView( modifier = Modifier.padding(innerPadding) )
                     // HomeView( modifier = Modifier.padding(innerPadding) )
                     // ComposeQuadrantsView( modifier = Modifier.padding(innerPadding) )
-                    BusinessCardView( modifier = Modifier.padding(innerPadding) )
+                    // BusinessCardView( modifier = Modifier.padding(innerPadding) )
+                    DiceRollerView( modifier = Modifier.padding(innerPadding) )
                 }
             }
 
