@@ -24,6 +24,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.demoapp.R
 import com.example.demoapp.ui.theme.LemonadeButtonColor
+import com.example.demoapp.ui.theme.LemonadeButtonColor0
+import com.example.demoapp.ui.theme.LemonadeButtonColor1
+import com.example.demoapp.ui.theme.LemonadeButtonColor10
+import com.example.demoapp.ui.theme.LemonadeButtonColor2
+import com.example.demoapp.ui.theme.LemonadeButtonColor3
+import com.example.demoapp.ui.theme.LemonadeButtonColor4
+import com.example.demoapp.ui.theme.LemonadeButtonColor5
+import com.example.demoapp.ui.theme.LemonadeButtonColor6
+import com.example.demoapp.ui.theme.LemonadeButtonColor7
+import com.example.demoapp.ui.theme.LemonadeButtonColor8
+import com.example.demoapp.ui.theme.LemonadeButtonColor9
 import com.example.demoapp.ui.theme.LemonadeNavBarColor
 
 val currentStage = mutableIntStateOf(0)
@@ -50,12 +61,80 @@ val lemonImages = mutableListOf(
     R.drawable.lemon_restart,
 )
 
-val ButtonStyle = ButtonColors(
+val defaultButtonStyle = ButtonColors(
     contentColor = LemonadeButtonColor,
     disabledContentColor = LemonadeButtonColor,
     containerColor = LemonadeButtonColor,
     disabledContainerColor = LemonadeButtonColor,
 )
+
+val buttonStyles = mutableListOf(
+    ButtonColors(
+        contentColor = LemonadeButtonColor0,
+        disabledContentColor = LemonadeButtonColor0,
+        containerColor = LemonadeButtonColor0,
+        disabledContainerColor = LemonadeButtonColor0,
+    ),
+    ButtonColors(
+        contentColor = LemonadeButtonColor1,
+        disabledContentColor = LemonadeButtonColor1,
+        containerColor = LemonadeButtonColor1,
+        disabledContainerColor = LemonadeButtonColor1,
+    ),
+    ButtonColors(
+        contentColor = LemonadeButtonColor2,
+        disabledContentColor = LemonadeButtonColor2,
+        containerColor = LemonadeButtonColor2,
+        disabledContainerColor = LemonadeButtonColor2,
+    ),
+    ButtonColors(
+        contentColor = LemonadeButtonColor3,
+        disabledContentColor = LemonadeButtonColor3,
+        containerColor = LemonadeButtonColor3,
+        disabledContainerColor = LemonadeButtonColor3,
+    ),
+    ButtonColors(
+        contentColor = LemonadeButtonColor4,
+        disabledContentColor = LemonadeButtonColor4,
+        containerColor = LemonadeButtonColor4,
+        disabledContainerColor = LemonadeButtonColor4,
+    ),
+    ButtonColors(
+        contentColor = LemonadeButtonColor5,
+        disabledContentColor = LemonadeButtonColor5,
+        containerColor = LemonadeButtonColor5,
+        disabledContainerColor = LemonadeButtonColor5,
+    ),
+    ButtonColors(
+        contentColor = LemonadeButtonColor6,
+        disabledContentColor = LemonadeButtonColor6,
+        containerColor = LemonadeButtonColor6,
+        disabledContainerColor = LemonadeButtonColor6,
+    ),
+    ButtonColors(
+        contentColor = LemonadeButtonColor7,
+        disabledContentColor = LemonadeButtonColor7,
+        containerColor = LemonadeButtonColor7,
+        disabledContainerColor = LemonadeButtonColor7,
+    ),
+    ButtonColors(
+        contentColor = LemonadeButtonColor8,
+        disabledContentColor = LemonadeButtonColor8,
+        containerColor = LemonadeButtonColor8,
+        disabledContainerColor = LemonadeButtonColor8,
+    ),
+    ButtonColors(
+        contentColor = LemonadeButtonColor9,
+        disabledContentColor = LemonadeButtonColor9,
+        containerColor = LemonadeButtonColor9,
+        disabledContainerColor = LemonadeButtonColor9,
+    ),
+    ButtonColors(
+        contentColor = LemonadeButtonColor10,
+        disabledContentColor = LemonadeButtonColor10,
+        containerColor = LemonadeButtonColor10,
+        disabledContainerColor = LemonadeButtonColor10,
+    ))
 
 @Composable
 fun LemonadeView(modifier: Modifier) {
@@ -85,7 +164,7 @@ fun LemonadeView(modifier: Modifier) {
                 onClick = { onButtonClicked() },
                 shape = RoundedCornerShape(40.dp),
                 modifier = Modifier.padding(bottom = 25.dp),
-                colors = ButtonStyle
+                colors = getButtonStyle()
             ) {
                 Image(
                     painter = painterResource(lemonImages[currentStage.intValue]),
@@ -96,6 +175,14 @@ fun LemonadeView(modifier: Modifier) {
                 text = stringResource(lemonMessages[currentStage.intValue]),
             )
         }
+    }
+}
+
+fun getButtonStyle(): ButtonColors{
+    if(currentStage.intValue == 1){
+        return buttonStyles[lemonSqueezesRemaining.intValue]
+    } else {
+        return defaultButtonStyle
     }
 }
 
